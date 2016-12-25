@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :messages, only: [:index, :create], format: 'json'
   get 'top/index'
   root 'top#index'
 
